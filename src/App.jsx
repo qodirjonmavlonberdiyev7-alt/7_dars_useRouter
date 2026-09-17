@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-import ParticleBackground from "./ParticleBackground";
 // complex state => useReducer
 
 function App() {
@@ -99,8 +98,6 @@ function App() {
 
   return (
     <div className="shop-app">
-      <ParticleBackground />
-
       <div className="shop-shell">
         <div className="shop-header">
           <h1 className="shop-title">Product</h1>

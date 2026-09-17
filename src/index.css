@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600;800&display=swap");
 
 :root {
-  --bg: #08090d;
+  --bg-a: #0b0c12;
+  --bg-b: #14101f;
   --surface: rgba(255, 255, 255, 0.04);
   --surface-strong: rgba(255, 255, 255, 0.06);
   --border: rgba(255, 255, 255, 0.08);
@@ -25,7 +26,10 @@
 
 body {
   min-height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(124, 92, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(255, 92, 196, 0.14), transparent 45%),
+    var(--bg-a);
   color: var(--text);
   font-family: "Space Grotesk", system-ui, sans-serif;
 }
@@ -34,24 +38,12 @@ body {
   min-height: 100vh;
 }
 
-/* ---------- app shell + particle canvas ---------- */
+/* ---------- app shell ---------- */
 .shop-app {
-  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 56px 24px;
-  isolation: isolate;
-  overflow-x: hidden;
-}
-
-.particle-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: block;
 }
 
 .shop-shell {
